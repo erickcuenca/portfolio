@@ -1,0 +1,83 @@
+html {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#headerTitle {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: monospace;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+#menuButton {
+    all: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#content {
+    align-self: center;
+    width: 90%;
+}
+#hero {
+    font-size: 24px;
+}
+#nameCont {
+    overflow: hidden;
+}
+#heroName{
+    display: block;
+    font-size: 15vw;
+    font-weight: bold;
+    font-family: monospace;
+    text-shadow:
+    -3px -3px 0 white, 
+    3px -3px 0 white,
+    -3px 3px 0 white,
+    3px 3px 0 white;  
+    color: black;
+    animation: revealSwipe 1s cubic-bezier(0.75, 0, 0.175, 1) .5s;
+    transform: translate(0,100%);
+    animation-fill-mode: forwards;
+    
+}
+@keyframes revealSwipe {
+    0% {
+      transform: translate(0,100%);
+    }
+    100% {
+      transform: translate(0,0);
+    }
+  }
+@keyframes revealOpacity {
+    0% {
+        filter: opacity(0);
+    }
+    100% {
+        filter: opacity(100);
+    }
+}
+.heroInfo {
+    filter: opacity(0);
+    font-size: 24px;
+    margin: 0;
+    animation: revealOpacity .5s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
